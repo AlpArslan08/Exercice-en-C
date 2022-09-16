@@ -19,10 +19,11 @@ int main()
     printf("\tveuillez saisir sa position :  ");
     scanf("%d", &pos);
 
-    if (pos <=0 || pos>taille){
+    do {
         printf("\t\tPosition invalide ! , Veuillez entrer une position entre 1 et %d : ", taille);
         scanf("%d", &pos);
-    }
+    }while ( pos <=0 || pos>taille )
+
     else
          for (i= taille ; i>=pos ;i--){
             T[i]=T[i-1];
